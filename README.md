@@ -31,6 +31,14 @@ Create your first HTML file 0-index.html with:
 - Add the language tag, specify English for ISO language code and add the direction tag (ltr or rtl) on the html tag.
 - Open your file in your browser (the page should be blank)
 
+
+# 1. Structure your webpage mandatory
+
+Copy the content of 0-index.html into 1-index.html
+
+Create the head and body sections
+- inside the html tag, create the head and body tags (empty) in this order
+
 ---
 
 ## Author
