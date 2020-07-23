@@ -24,32 +24,32 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
-h1, h2, h3,
-h4, h5, h6{
+h1,h2, h3,
+h4, h5, h6 {
   font-family: var(--font-family-title);
   font-weight: var(--font-weight-bold);
 }
-body{
+body {
   font-family: var(--font-family-base);
   font-size: var(--font-size-medium);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-base);
 }
-body, a{
+body, a {
   color: var(--text-color);
   text-decoration: none;
 }
-.visually-hidden{
+.visually-hidden {
   display: none;
 }
-.section-header{
+.section-header {
   text-align: var(--section-header-align);
 }
 .card-category,
-.section-tagline{
+.section-tagline {
   color: var(--color-primary);
 }
-.section-tagline{
+.section-tagline {
   font-family: var(--font-family-title);
   font-weight: var(--font-weight-bold);
   text-transform: var(--section-tagline-transform);

@@ -23,17 +23,17 @@ html {
   scroll-behavior: smooth;
 }
 h1, h2, h3,
-h4, h5, h6{
+h4, h5, h6 {
   font-family: var(--font-family-title);
   font-weight: var(--font-weight-bold);
 }
-body{
+body {
   font-family: var(--font-family-base);
   font-size: var(--font-size-medium);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-base);
 }
-body, a{
+body, a {
   color: var(--text-color);
   text-decoration: none;
 }
@@ -41,6 +41,6 @@ body, a{
   display: none;
 }
 .card-category,
-.section-tagline{
+.section-tagline {
   color: var(--color-primary);
 }
