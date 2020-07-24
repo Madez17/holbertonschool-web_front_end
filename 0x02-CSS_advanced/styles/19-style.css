@@ -64,9 +64,13 @@ body {
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-base);
 }
-a:link {
+a {
   color: var(--text-color);
   text-decoration: none;
+}
+a:link {
+  color: var(--text-color);
+  font-weight: var(--font-weight-bold);
 }
 a:visited {
   font-style: italic;
@@ -75,7 +79,7 @@ a:hover {
   text-decoration: underline;
 }
 a:active {
-  background-color: var(--color-light-grey);
+  color: var(--color-light-grey);
 }
 .visually-hidden {
   display: none;
