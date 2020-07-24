@@ -43,7 +43,6 @@
   --nav-item-display: inline-block;
   --nav-item-margin: 0 0 3rem 0;
   --nav-item-link-hover: var(--color-primary);
-
 }
 *, *:before, *:after {
   box-sizing: border-box;
@@ -174,7 +173,7 @@ ul.row {
 .card-services a {
   background-color: var(--color-light-grey);
   display: block;
-  margin: 2rem;
+  padding: 2rem;
 }
 .card-services a:hover {
   background-color: var(--color-primary);
