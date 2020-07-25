@@ -181,8 +181,9 @@ ul.row {
   text-transform: var(--section-tagline-transform);
 }
 .container {
-  margin: 0 auto;
-  width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
 }
 .col-1-3 {
   width: 33.33%;
