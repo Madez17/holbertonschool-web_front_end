@@ -83,6 +83,12 @@ body {
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-base);
 }
+[data-section-theme='dark'] {
+  --text-color: var(--color-white);
+  --section-title-color: var(--color-white);
+  background-color: var(--color-black);
+  --button-color: var(--color-white);
+}
 a {
   color: var(--text-color);
   text-decoration: none;
@@ -327,13 +333,6 @@ ul.row {
   color: var(--text-color);
   font-size: var(--font-size-small);
   margin: 0;
-}
-/* class selector */
-[data-section-theme="dark"] {
-  background-color: var(--color-black);
-  --section-title-color: var(--color-white);
-  --text-color: var(--color-white);
-  --button-color: var(--color-white);
 }
 .button {
   display: var(--button-display);
