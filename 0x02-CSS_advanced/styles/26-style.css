@@ -201,6 +201,9 @@ ul.row {
 .social-link > svg {
   fill: var(--text-color);
 }
+.card-testimonial {
+  text-align: center;
+}
 .card-testimonial .card-avatar {
   border-radius: 50%;
   height: 10rem;
@@ -223,19 +226,16 @@ ul.row {
   --text-color: var(--color-white);
   --button-color: var(--color-white);
 }
-[class="button"] {
-  border: var(--button-border);
-  color: var(--button-color);
+.button {
   display: var(--button-display);
-  font-size: var(--button-font-size);
   padding: var(--button-padding);
+  border: var(--button-border);
+  font-size: var(--button-font-size);
+  color: var(--button-color);
   text-decoration: var(--button-text-decoration);
 }
-[class="button"]:hover {
-  background-color: var(--button-hover-background);
+.button:hover {
   color: var(--button-hover-color);
   text-decoration: var(--button-hover-text-decoration);
-}
-[class="card-testimonial"] {
-  text-align: center;
+  background-color: var(--button-hover-background);
 }

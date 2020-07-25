@@ -105,12 +105,17 @@ ul.row {
   padding: 0;
   margin: 0;
 }
+.header {
+  padding: var(--header-padding);
+}
+.header-logo {
+  position: var(--header-logo-position);
+}
 .header-logo a {
   display: var(--header-logo-link-display);
   left: var(--header-logo-link-left);
   position: var(--header-logo-link-position);
   top: var(--header-logo-link-top);
-  
 }
 .navbar-menu {
   float: right;
@@ -256,6 +261,9 @@ ul.row {
 .card-work:hover .card-title {
   opacity: 1;
 }
+.card-testimonial {
+  text-align: center;
+}
 .card-testimonial .card-avatar {
   border-radius: 50%;
   height: 10rem;
@@ -265,6 +273,9 @@ ul.row {
   color: var(--color-primary);
   display: block;
   padding-top: 1rem;
+}
+.section-hero {
+  background-size: 90rem auto;
 }
 .section-hero .section-title {
   margin-bottom: 5rem;
@@ -299,28 +310,16 @@ ul.row {
   --text-color: var(--color-white);
   --button-color: var(--color-white);
 }
-[class="button"] {
-  border: var(--button-border);
-  color: var(--button-color);
+.button {
   display: var(--button-display);
-  font-size: var(--button-font-size);
   padding: var(--button-padding);
+  border: var(--button-border);
+  font-size: var(--button-font-size);
+  color: var(--button-color);
   text-decoration: var(--button-text-decoration);
 }
-[class="button"]:hover {
-  background-color: var(--button-hover-background);
+.button:hover {
   color: var(--button-hover-color);
   text-decoration: var(--button-hover-text-decoration);
-}
-[class="card-testimonial"] {
-  text-align: center;
-}
-[class="section-hero"] {
-  background-size: 90rem auto;
-}
-[class="header"] {
-  padding: var(--header-padding);
-}
-[class="header-logo"] {
-  position: var(--header-logo-position);
+  background-color: var(--button-hover-background);
 }
