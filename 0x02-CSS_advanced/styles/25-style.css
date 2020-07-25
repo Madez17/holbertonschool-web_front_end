@@ -214,15 +214,15 @@ ul.row {
   --button-color: var(--color-white);
 }
 .button {
-  border: var(--button-border);
-  color: var(--button-color);
   display: var(--button-display);
-  font-size: var(--button-font-size);
   padding: var(--button-padding);
+  border: var(--button-border);
+  font-size: var(--button-font-size);
+  color: var(--button-color);
   text-decoration: var(--button-text-decoration);
 }
 .button:hover {
-  background-color: var(--button-hover-background);
   color: var(--button-hover-color);
   text-decoration: var(--button-hover-text-decoration);
+  background-color: var(--button-hover-background);
 }
