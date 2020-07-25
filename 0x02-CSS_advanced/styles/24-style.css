@@ -169,7 +169,7 @@ ul.row {
   --text-color: var(--color-white);
 }
 .card-services .card-title {
-  margin: none;
+  margin: 0;
 }
 .card-services a {
   display: block;
