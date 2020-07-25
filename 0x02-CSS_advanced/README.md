@@ -27,8 +27,6 @@ Based on styles/1-style.css, create the following declarations:
 - All elements with the class section-tagline should have their foreground color set to #D73953
 
 ##  3. Reuse and repeat. A programmer's life should be simple with variables
-
-Based on styles/2-style.css:
 - Target the root element and define the following custom properties:
   - color-primary set to #d73953
   - color-black set to #090909
@@ -41,8 +39,6 @@ Based on styles/2-style.css:
 
 ## 4. Variables for storing certain font types
 
-Based on styles/3-style.css:
-
 - Targeting the root element, create the custom font-family properties font-family-base and font-family-title:
   - set the first choice font as Helvetica Neue
   - set the second choice font as Helvetica
@@ -54,47 +50,37 @@ Based on styles/3-style.css:
 
 ## 5. Variables for the font size
 
-Based on styles/4-style.css:
+- Targeting the root selector, create the following custom properties:
+  - font-size-small set to 1.2rem
+  - font-size-medium set to 1.6rem
+  - font-size-large set to 1.8rem
+  - font-size-x-large set to 2.3rem
+  - font-size-xx-large set to 4.8rem
+- All fonts in the html element should be at 62.5% of their normal size
+- Any fonts in the body should have their sizes set to font-size-medium
 
-    Targeting the root selector, create the following custom properties:
-        font-size-small set to 1.2rem
-        font-size-medium set to 1.6rem
-        font-size-large set to 1.8rem
-        font-size-x-large set to 2.3rem
-        font-size-xx-large set to 4.8rem
-    All fonts in the html element should be at 62.5% of their normal size
-    Any fonts in the body should have their sizes set to font-size-medium
+## 6. Variables for the font-weight
 
-6. Variables for the font-weight mandatory
+- Targeting the root element, create the following custom properties:
+  - font-weight-regular set to 400
+  - font-weight-bold set to 700
+- Set the boldness of fonts in the body to font-weight-regular
+- Set the boldness of fonts in the headings to font-weight-bold
 
-Based on styles/5-style.css
+## 7. Integrating Google Fonts into the CSS file
 
-    Targeting the root element, create the following custom properties:
-        font-weight-regular set to 400
-        font-weight-bold set to 700
-    Set the boldness of fonts in the body to font-weight-regular
-    Set the boldness of fonts in the headings to font-weight-bold
+- Add Open Sans as the first choice font for font-family-base, with the previous fonts shifted down accordingly
+- Add Raleway as the first choice font for font-family-title, with the previous fonts shifted down accordingly
 
-7. Integrating Google Fonts into the CSS file mandatory
+## 8. Defining line heights
 
-Based on styles/6-style.css:
+- Targeting root, create the following custom properties:
+    - line-height-small set to 1.2
+    - line-height-base set to 1.5
+    - line-height-big set to 1.8
+- Set the minimum height of line boxes in the body to line-height-base
 
-    Add Open Sans as the first choice font for font-family-base, with the previous fonts shifted down accordingly
-    Add Raleway as the first choice font for font-family-title, with the previous fonts shifted down accordingly
-
-8. Defining line heights mandatory
-
-Based on styles/7-style.css:
-
-    Targeting root, create the following custom properties:
-        line-height-small set to 1.2
-        line-height-base set to 1.5
-        line-height-big set to 1.8
-    Set the minimum height of line boxes in the body to line-height-base
-
-9. Links are decorated by default, time to remove them mandatory
-
-Based on styles/8-style.css
+## 9. Links are decorated by default, time to remove them
 
 Style the anchor elements so the text isn’t decorated with anything
 
@@ -167,15 +153,6 @@ Target the container class and set the following:
     960px wide
     evenly distribute the margins on both the left and and right side
 
-Does not need to pass w3c
-
-Repo:
-
-    GitHub repository: holbertonschool-web_front_end
-    Directory: 0x02-CSS_advanced
-    File: styles/16-style.css
-
-
 17. Adding padding to sections mandatory
 
 Based on styles/16-style.css:
@@ -192,15 +169,6 @@ Based on styles/16-style.css:
     Following the section-header declaration, target the section-body class, pad all 4 sides with section-body-padding
     Following the section-body declaration, target the section-footer class, pad all 4 sides with section-footer-padding and set the horizontal alignment with section-footer-align
     At the end of your style file, target the class footer, pad all 4 sides of the selected element with footer-padding
-
-Does not need to pass w3c
-
-Repo:
-
-    GitHub repository: holbertonschool-web_front_end
-    Directory: 0x02-CSS_advanced
-    File: styles/17-style.css
-
 
 18. Customizing the navbar mandatory
 
@@ -232,15 +200,6 @@ Based on styles/17-style.css:
         nav-item-marginto 3 times the root element on the bottom and 0 elsewhere
         nav-item-link-hover set to color-primary
 
-Does not need to pass w3c
-
-Repo:
-
-    GitHub repository: holbertonschool-web_front_end
-    Directory: 0x02-CSS_advanced
-    File: styles/18-style.css
-
-
 19. Grid styling and custom variables mandatory
 
 Based on styles/18-style.css:
@@ -265,15 +224,6 @@ Based on styles/18-style.css:
         set the foreground color to text-color
     For all ul tag in the footer class, align the text to the right
 
-Does not need to pass w3c
-
-Repo:
-
-    GitHub repository: holbertonschool-web_front_end
-    Directory: 0x02-CSS_advanced
-    File: styles/19-style.css
-
-
 20. Clear the context of the grid mandatory
 
 Based on styles/19-style.css:
@@ -283,15 +233,6 @@ Write a CSS rule that creates a new row after each instance of the class row wit
     no content
     displayed as a table
     do not allow any floating elements on either side
-
-Does not have to pass w3c
-
-Repo:
-
-    GitHub repository: holbertonschool-web_front_end
-    Directory: 0x02-CSS_advanced
-    File: styles/20-style.css
-
 
 21. Simplify the col- selector mandatory
 
@@ -303,15 +244,6 @@ Based on styles/20-style.css:
         Hint: be mindful of specificity
     Remove references to these common properties for the individual col-1-3 and col-1-2 classes
 
-Does not need w3c
-
-Repo:
-
-    GitHub repository: holbertonschool-web_front_end
-    Directory: 0x02-CSS_advanced
-    File: styles/21-style.css
-
-
 22. Add a dark theme to sections mandatory
 
 Based on styles/21-style.css:
@@ -321,15 +253,6 @@ Style the data-section-theme=“dark” with these rules:
     Redefine the custom property text-color to the color-white
     Redefine the custom property section-title-color to color-white
     Set the background to the variable color-black
-
-Does not need to pass w3c
-
-Repo:
-
-    GitHub repository: holbertonschool-web_front_end
-    Directory: 0x02-CSS_advanced
-    File: styles/22-style.css
-
 
 23. Fix issues for dark theme mandatory
 
@@ -346,15 +269,6 @@ Style the social-link class:
 Style the social-link class that also selects the svg children
 
     Fill in the color of the svg children with the text-color variable
-
-Does not have to pass w3c
-
-Repo:
-
-    GitHub repository: holbertonschool-web_front_end
-    Directory: 0x02-CSS_advanced
-    File: styles/23-style.css
-
 
 24. Add background and hover state to services mandatory
 
@@ -375,15 +289,6 @@ Target the hover state of a that is inside card-services
     Set the foreground color to the variable color-white
     Set the color of the background to the variable color-primary
     Text should not be decorated at all
-
-Does not need to pass w3c
-
-Repo:
-
-    GitHub repository: holbertonschool-web_front_end
-    Directory: 0x02-CSS_advanced
-    File: styles/24-style.css
-
 
 25. Add border to the button mandatory
 
@@ -419,15 +324,6 @@ Add these selectors after the selector for anchor links in active state:
     In [data-section-theme="dark"], add the variable
         Create a custom property button-color pointing to the variable color-white
 
-Does not have to pass w3c
-
-Repo:
-
-    GitHub repository: holbertonschool-web_front_end
-    Directory: 0x02-CSS_advanced
-    File: styles/25-style.css
-
-
 26. Add border radius to images mandatory
 
 Based on styles/25-style.css
@@ -448,15 +344,6 @@ Target the <cite> HTML tag which is inside card-quote inside the card-testimonia
     Pad the top with 1x the root element
     Set the foreground color value to the value of the color-primary variable
 
-Does not have to pass w3c
-
-Repo:
-
-    GitHub repository: holbertonschool-web_front_end
-    Directory: 0x02-CSS_advanced
-    File: styles/26-style.css
-
-
 27. Styling the section hero mandatory
 
 Based on styles/26-style.css
@@ -473,15 +360,6 @@ Target the section-title inside the section-hero
 Target the section-inner inside the section-hero
 
     Add 10rem, 40rem, 2rem, and 0 to the padding on the top, right, bottom, left all in 1 rule
-
-Does not have to pass w3c
-
-Repo:
-
-    GitHub repository: holbertonschool-web_front_end
-    Directory: 0x02-CSS_advanced
-    File: styles/27-style.css
-
 
 28. Fixing the header and menu navigation bar mandatory
 
@@ -511,15 +389,6 @@ Target the link inside the header-logo class
     Set the vertical position of the element using header-logo-link-top
     Set the horizontal position of the element using header-logo-link-left
 
-Does not have to pass w3c
-
-Repo:
-
-    GitHub repository: holbertonschool-web_front_end
-    Directory: 0x02-CSS_advanced
-    File: styles/28-style.css
-
-
 29. Styling and custom properties for the nav mandatory
 
 Based on styles/28-style.css
@@ -540,15 +409,6 @@ Target the before pseudo elements of nav-link when nav-item is hover and is insi
 
     Set the background color of the elements to the variable color-primary
     Set the width of the elements to 100%
-
-Does not have to pass w3c
-
-Repo:
-
-    GitHub repository: holbertonschool-web_front_end
-    Directory: 0x02-CSS_advanced
-    File: styles/29-style.css
-
 
 30. Fix the works section mandatory
 
@@ -602,15 +462,6 @@ Target card-title when card-work is hover
 
     The opacity of these elements should be set to the value of 1
 
-Does not have to pass w3c
-
-Repo:
-
-    GitHub repository: holbertonschool-web_front_end
-    Directory: 0x02-CSS_advanced
-    File: styles/30-style.css
-
-
 31. Add quotes decoration on testimonials mandatory
 
 Target the card-quote that is inside the card-testimonial
@@ -626,15 +477,6 @@ Target the before pseudo-element of card-quote that is inside the card-testimoni
     The foreground color of the selected elements should be set to #efeded
     The size of fonts should be 10rem
     The z-order should be set to -1
-
-Does not have to pass w3c
-
-Repo:
-
-    GitHub repository: holbertonschool-web_front_end
-    Directory: 0x02-CSS_advanced
-    File: styles/31-style.css
-
 
 32. Incorporating transitions mandatory
 
