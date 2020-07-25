@@ -199,12 +199,6 @@ ul.row {
   color: var(--color-white);
   text-decoration: none;
 }
-.social-link {
-  display: block;
-}
-.social-link > svg {
-  fill: var(--text-color);
-}
 .card-testimonial .card-avatar {
   border-radius: 50%;
   height: 10rem;
@@ -229,6 +223,12 @@ ul.row {
 }
 .footer-address {
   color: var(--text-color);
+}
+.social-link {
+  display: block;
+}
+.social-link > svg {
+  fill: var(--text-color);
 }
 .footer-copyright {
   color: var(--text-color);
