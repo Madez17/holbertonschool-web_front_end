@@ -82,441 +82,401 @@ Based on styles/1-style.css, create the following declarations:
 
 ## 9. Links are decorated by default, time to remove them
 
-Style the anchor elements so the text isn’t decorated with anything
+- Style the anchor elements so the text isn’t decorated with anything
 
-10. Centering the section titles mandatory
+## 10. Centering the section titles
 
-Based on styles/9-style.css:
+- Create a new custom property section-header-align and set it to center
+- Just above the section-tagline declaration, create a new declaration targeting the class section-header
+    - Set horizontal alignment of that class with section-header-align
 
-    Create a new custom property section-header-align and set it to center
-    Just above the section-tagline declaration, create a new declaration targeting the class section-header
-        Set horizontal alignment of that class with section-header-align
+## 11. Add more styles to the section tagline
 
-11. Add more styles to the section tagline mandatory
+- Create a custom property section-tagline-transform and set it to uppercase
+- Targeting the section-tagline class:
+    - Set the family of fonts to font-family-title
+    - Add a rule that uses the section-tagline-transform property to modify text
+    - Set the weight of fonts to font-weight-bold
 
-Based on styles/10-style.css:
+## 12. Adding more styling to the section title
 
-    Create a custom property section-tagline-transform and set it to uppercase
-    Targeting the section-tagline class:
-        Set the family of fonts to font-family-title
-        Add a rule that uses the section-tagline-transform property to modify text
-        Set the weight of fonts to font-weight-bold
+- Create the following custom properties:
+    - section-title-margin set to 0
+    - section-title-color set to color-black
 
-12. Adding more styling to the section title mandatory
+- Just above the section-tagline declaration, create a new declaration targeting the section-title class
 
-Based on styles/11-style.css:
+    - Set the family of fonts to font-family-title
+    - Set the font size to font-size-xx-large
+    - Set the font weight to font-weight-bold
+    - Use the section-title-margin to set the margin
+    - Use the section-title-color to set the text color
 
-    Create the following custom properties:
-        section-title-margin set to 0
-        section-title-color set to color-black
+## 13. Pseudo Classes
 
-Just above the section-tagline declaration, create a new declaration targeting the section-title class
+- Ensure that the declaration targeting anchor elements only targets those containing a hyperlink
+- Directly after this declaration, target the visited state for the link
+    - Italicize the text
+- Directly after the visited state, target the hover state for the link
+    - Decorate the links with an underline when hovering
+- Directly after the hover state, target the active state for the link
+    - Set the color of the background with the variable color-light-grey
 
-    Set the family of fonts to font-family-title
-    Set the font size to font-size-xx-large
-    Set the font weight to font-weight-bold
-    Use the section-title-margin to set the margin
-    Use the section-title-color to set the text color
+## 14. Resetting the CSS stylesheet for browser consistency
 
-13. Pseudo Classes mandatory
+- Normalize your CSS file using necolas’ normalize.css with this version.
 
-Based on styles/12-style.css:
+## 15. Add universal box-sizing
 
-    Ensure that the declaration targeting anchor elements only targets those containing a hyperlink
-    Directly after this declaration, target the visited state for the link
-        Italicize the text
-    Directly after the visited state, target the hover state for the link
-        Decorate the links with an underline when hovering
-    Directly after the hover state, target the active state for the link
-        Set the color of the background with the variable color-light-grey
+- Just before the styling for html, add a universal box sizing rule
 
-14. Resetting the CSS stylesheet for browser consistency mandatory
+## 16. Styling the container
 
-Based on styles/13-style.css:
+- After the styles for .section-tagline,
 
-Normalize your CSS file using necolas’ normalize.css with this version.
+- Target the container class and set the following:
 
-15. Add universal box-sizing mandatory
+    - 960px wide
+    - evenly distribute the margins on both the left and and right side
 
-Based on styles/14-style.css:
+## 17. Adding padding to sections
 
-Just before the styling for html, add a universal box sizing rule
+- Based on styles/16-style.css:
 
-16. Styling the container mandatory
-
-Based on styles/15-style.css:
-
-After the styles for .section-tagline,
-
-Target the container class and set the following:
-
-    960px wide
-    evenly distribute the margins on both the left and and right side
-
-17. Adding padding to sections mandatory
-
-Based on styles/16-style.css:
-
-    Create the following custom properties:
-        section-padding set to 5rem 0
-        section-header-padding set to 0 0 3rem
-        section-body-padding set to 0 0 3rem
-        section-footer-padding set to 3rem 0 0
-        section-footer-align set to center
-        footer-padding set to 5rem 0 1rem
-    Just before the section-header declaration, target the class section and set the padding on all 4 sides to section-padding
+    - Create the following custom properties:
+        - section-padding set to 5rem 0
+        - section-header-padding set to 0 0 3rem
+        - section-body-padding set to 0 0 3rem
+        - section-footer-padding set to 3rem 0 0
+        - section-footer-align set to center
+        - footer-padding set to 5rem 0 1rem
+    - Just before the section-header declaration, target the class section and set the padding on all 4 sides to section-padding
     Set .section-header‘s pad all 4 sides with section-header-padding
-    Following the section-header declaration, target the section-body class, pad all 4 sides with section-body-padding
-    Following the section-body declaration, target the section-footer class, pad all 4 sides with section-footer-padding and set the horizontal alignment with section-footer-align
-    At the end of your style file, target the class footer, pad all 4 sides of the selected element with footer-padding
-
-18. Customizing the navbar mandatory
-
-Based on styles/17-style.css:
+    - Following the section-header declaration, target the section-body class, pad all 4 sides with section-body-padding
+    - Following the section-body declaration, target the section-footer class, pad all 4 sides with section-footer-padding and set the horizontal alignment with section-footer-align
+    - At the end of your style file, target the class footer, pad all 4 sides of the selected element with footer-padding
+
+## 18. Customizing the navbar
+
+- Targeting the navbar-menu class, let it float to the right
+For the nav class:
+    - the margin on all sides should be set to 0
+    - the padding on all sides should be set to 0
+    - The styling on the list should not use anything
+    - center align the text
+- For the nav-item class in nav class:
+    - set the family of fonts to nav-item-font-family
+    - set the boldness of fonts to nav-item-font-weight
+    - set the size of fonts to nav-item-font-size
+    - set the spacing between text characters to nav-item-letter-spacing
+    - set the display to nav-item-display
+    - set the margin on all sides to nav-item-margin
+- For the nav-link class in nav class:
+    - set the display to block
+    - set the padding to half of the root element for top and bottom, and equal to the root element for left and right
+- While hovering over the nav-link class in nav class, set their foreground color value to nav-item-link-hover
+Create the following custom properties:
+    - nav-item-font-family set to font-family-title
+    - nav-item-font-weight set to font-weight-bold
+    - nav-item-font-size set tofont-size-medium
+    - nav-item-letter-spacing set to 4% of the root element
+    - nav-item-display to inline-block
+    - nav-item-marginto 3 times the root element on the bottom and 0 elsewhere
+    - nav-item-link-hover set to color-primary
+
+## 19. Grid styling and custom variables
+
+- Create the custom property section-tagline-margin set to 0
+Set the margins for the section-tagline class to section-tagline-margin
+- For all ul with the class row:
+    - 0 margins all around
+    - No padding all around
+    - the list should not have any default styles at all
+- For the col-1-3 class:
+    - set the width to 33.33% of its parent
+    - float it to the left
+    - set its padding to half of the root element
+- For the col-1-2 class:
+    - set the width to 50% of the parent
+    - float it to the left
+    - set its padding to half of the root element
+- For the footer-copyright class:
+    - No margins
+    - Set the size of the fonts to font-size-small
+    - set the foreground color to text-color
+- For all ul tag in the footer class, align the text to the right
+
+## 20. Clear the context of the grid
 
-    Targeting the navbar-menu class, let it float to the right
-    For the nav class:
-        the margin on all sides should be set to 0
-        the padding on all sides should be set to 0
-        The styling on the list should not use anything
-        center align the text
-    For the nav-item class in nav class:
-        set the family of fonts to nav-item-font-family
-        set the boldness of fonts to nav-item-font-weight
-        set the size of fonts to nav-item-font-size
-        set the spacing between text characters to nav-item-letter-spacing
-        set the display to nav-item-display
-        set the margin on all sides to nav-item-margin
-    For the nav-link class in nav class:
-        set the display to block
-        set the padding to half of the root element for top and bottom, and equal to the root element for left and right
-    While hovering over the nav-link class in nav class, set their foreground color value to nav-item-link-hover
-    Create the following custom properties:
-        nav-item-font-family set to font-family-title
-        nav-item-font-weight set to font-weight-bold
-        nav-item-font-size set tofont-size-medium
-        nav-item-letter-spacing set to 4% of the root element
-        nav-item-display to inline-block
-        nav-item-marginto 3 times the root element on the bottom and 0 elsewhere
-        nav-item-link-hover set to color-primary
+- Write a CSS rule that creates a new row after each instance of the class row with the following properties:
 
-19. Grid styling and custom variables mandatory
+    - no content
+    - displayed as a table
+    - do not allow any floating elements on either side
 
-Based on styles/18-style.css:
+## 21. Simplify the col- selector
 
-    Create the custom property section-tagline-margin set to 0
-    Set the margins for the section-tagline class to section-tagline-margin
-    For all ul with the class row:
-        0 margins all around
-        No padding all around
-        the list should not have any default styles at all
-    For the col-1-3 class:
-        set the width to 33.33% of its parent
-        float it to the left
-        set its padding to half of the root element
-    For the col-1-2 class:
-        set the width to 50% of the parent
-        float it to the left
-        set its padding to half of the root element
-    For the footer-copyright class:
-        No margins
-        Set the size of the fonts to font-size-small
-        set the foreground color to text-color
-    For all ul tag in the footer class, align the text to the right
+- Select all classes that start with col-
+    - float them to the left
+    - set their padding to half of the root element
+    - Hint: be mindful of specificity
+- Remove references to these common properties for the individual col-1-3 and col-1-2 classes
 
-20. Clear the context of the grid mandatory
+## 22. Add a dark theme to sections
 
-Based on styles/19-style.css:
+- Style the data-section-theme=“dark” with these rules:
 
-Write a CSS rule that creates a new row after each instance of the class row with the following properties:
+    - Redefine the custom property text-color to the color-white
+    - Redefine the custom property section-title-color to color-white
+    - Set the background to the variable color-black
 
-    no content
-    displayed as a table
-    do not allow any floating elements on either side
+## 23. Fix issues for dark theme
 
-21. Simplify the col- selector mandatory
+- Style the footer-address class
 
-Based on styles/20-style.css:
+    - Set the color of the text to the text-color property
 
-    Select all classes that start with col-
-        float them to the left
-        set their padding to half of the root element
-        Hint: be mindful of specificity
-    Remove references to these common properties for the individual col-1-3 and col-1-2 classes
+- Style the social-link class:
 
-22. Add a dark theme to sections mandatory
+    - Style it so that it renders as a block element
 
-Based on styles/21-style.css:
+- Style the social-link class that also selects the svg children
 
-Style the data-section-theme=“dark” with these rules:
+    - Fill in the color of the svg children with the text-color variable
 
-    Redefine the custom property text-color to the color-white
-    Redefine the custom property section-title-color to color-white
-    Set the background to the variable color-black
+## 24. Add background and hover state to services
 
-23. Fix issues for dark theme mandatory
+- Target card-title that is inside card-services
 
-Based on styles/22-style.css:
+    - The margin on all sides should be none at all
 
-Style the footer-address class
+- Target a that is inside card-services
 
-    Set the color of the text to the text-color property
+    - Have them render as block level elements
+    - The padding should be set to 2x the root element
+    - Set the background color to the variable color-light-grey
 
-Style the social-link class:
+- Target the hover state of a that is inside card-services
 
-    Style it so that it renders as a block element
+    - Set the foreground color to the variable color-white
+    - Set the color of the background to the variable color-primary
+    - Text should not be decorated at all
 
-Style the social-link class that also selects the svg children
+## 25. Add border to the button
 
-    Fill in the color of the svg children with the text-color variable
+- Add custom properties to the root selector in the css file
 
-24. Add background and hover state to services mandatory
+    - Name: button-display, Value: inline-block
+    - Name: button-padding, Value: 1.5rem 3rem
+    - Name: button-border, Value: 0.2rem solid var(--color-primary)
+    - Name: button-color, Value: color-black
+    - Name: button-text-decoration, Value: none
+    - Name: button-font-size, Value: font-size-large
+    - Name: button-hover-color, Value: color-white
+    - Name: button-hover-text-decoration, Value: none
+    - Name: button-hover-background, Value: color-primary
 
-Based on styles/23-style.css
+- Add these selectors after the selector for anchor links in active state:
 
-Target card-title that is inside card-services
+    - Create the button class selector
+        - Set the display of the button to the variable button-display
+        - Add padding all around with the variable button-padding
+        - Style the border with the variable button-border
+        - Set the size of fonts to the variable button-font-size
+        - Set the foreground color to the variable button-color
+        - Decorated text should have the value of the variable button-text-decoration
 
-    The margin on all sides should be none at all
+    - Create the hover state of the button class selector
+        - Set the foreground color value to the variable button-hover-color
+        - Decorated text should have the value of the variable button-hover-text-decoration
+        - Use the value of the variable button-hover-background for the background
 
-Target a that is inside card-services
+    - In [data-section-theme="dark"], add the variable
+        - Create a custom property button-color pointing to the variable color-white
 
-    Have them render as block level elements
-    The padding should be set to 2x the root element
-    Set the background color to the variable color-light-grey
+## 26. Add border radius to images
 
-Target the hover state of a that is inside card-services
+- Add the card-testimonial selector
 
-    Set the foreground color to the variable color-white
-    Set the color of the background to the variable color-primary
-    Text should not be decorated at all
+    - Center align the text
 
-25. Add border to the button mandatory
+- Target the card-avatar that is inside the card-testimonial
 
-Based on styles/24-style.css
+    - Round the radius on all sides at 50%
+    - Set the width to 10x the root element
+    - Set the height to 10x the root element
 
-Add custom properties to the root selector in the css file
+- Target the <cite> HTML tag which is inside card-quote inside the card-testimonial
 
-    Name: button-display, Value: inline-block
-    Name: button-padding, Value: 1.5rem 3rem
-    Name: button-border, Value: 0.2rem solid var(--color-primary)
-    Name: button-color, Value: color-black
-    Name: button-text-decoration, Value: none
-    Name: button-font-size, Value: font-size-large
-    Name: button-hover-color, Value: color-white
-    Name: button-hover-text-decoration, Value: none
-    Name: button-hover-background, Value: color-primary
+    - Style as a block level element
+    - Pad the top with 1x the root element
+    - Set the foreground color value to the value of the color-primary variable
 
-Add these selectors after the selector for anchor links in active state:
+## 27. Styling the section hero
 
-    Create the button class selector
-        Set the display of the button to the variable button-display
-        Add padding all around with the variable button-padding
-        Style the border with the variable button-border
-        Set the size of fonts to the variable button-font-size
-        Set the foreground color to the variable button-color
-        Decorated text should have the value of the variable button-text-decoration
+- Add the section-hero selector
 
-    Create the hover state of the button class selector
-        Set the foreground color value to the variable button-hover-color
-        Decorated text should have the value of the variable button-hover-text-decoration
-        Use the value of the variable button-hover-background for the background
+    - Set the size of the background using 2-value syntax
+    - Width should be 90rem and the height should be set automatic
 
-    In [data-section-theme="dark"], add the variable
-        Create a custom property button-color pointing to the variable color-white
+- Target the section-title inside the section-hero
 
-26. Add border radius to images mandatory
+    - Add 5rem of margin to the bottom
 
-Based on styles/25-style.css
+- Target the section-inner inside the section-hero
 
-Add the card-testimonial selector
+    - Add 10rem, 40rem, 2rem, and 0 to the padding on the top, right, bottom, left all in 1 rule
 
-    Center align the text
+## 28. Fixing the header and menu navigation bar
 
-Target the card-avatar that is inside the card-testimonial
+- Create these custom properties
 
-    Round the radius on all sides at 50%
-    Set the width to 10x the root element
-    Set the height to 10x the root element
+    - Name: header-padding, Value: 4rem 0 0
+    - Name: header-logo-position, Value: relative
+    - Name: header-logo-link-display, Value: inline-block
+    - Name: header-logo-link-position, Value: absolute
+    - Name: header-logo-link-top, Value: -1rem
+    - Name: header-logo-link-left, Value: 0
 
-Target the <cite> HTML tag which is inside card-quote inside the card-testimonial
+- Create a header class selector
 
-    Style as a block level element
-    Pad the top with 1x the root element
-    Set the foreground color value to the value of the color-primary variable
+    - Pad the header with the value within the variable header-padding
 
-27. Styling the section hero mandatory
+- Create a header-logo class selector
 
-Based on styles/26-style.css
+    - Position the header-logo with the value of the variable header-logo-position
 
-Add the section-hero selector
+- Target the link inside the header-logo class
 
-    Set the size of the background using 2-value syntax
-    Width should be 90rem and the height should be set automatic
+    - Render the display using the value of the variable header-logo-link-display
+    - Position the links with the value of the variable header-logo-link-position
+    - Set the vertical position of the element using header-logo-link-top
+    - Set the horizontal position of the element using header-logo-link-left
 
-Target the section-title inside the section-hero
+## 29. Styling and custom properties for the nav
 
-    Add 5rem of margin to the bottom
+- Edit the nav-item-link-hover property by setting its value to the color-whitevariable
 
-Target the section-inner inside the section-hero
+- Target the before pseudo elements of nav-link that is inside the nav
 
-    Add 10rem, 40rem, 2rem, and 0 to the padding on the top, right, bottom, left all in 1 rule
+    - Set the values of these elements to empty using content
+    - Absolutely position the targeted elements
+    - Set the vertical position to 0
+    - The horizontal position of the targeted elements should be 0
+    - Set the color of the background color of the targeted elements to the value color-white
+    - The width of the targeted elements should be set to 0
+    - Set the height to 20% of the root element value
 
-28. Fixing the header and menu navigation bar mandatory
+- Target the before pseudo elements of nav-link when nav-item is hover and is inside nav
 
-Based on styles/27-style.css
+    - Set the background color of the elements to the variable color-primary
+    - Set the width of the elements to 100%
 
-Create these custom properties
+## 30. Fix the works section
 
-    Name: header-padding, Value: 4rem 0 0
-    Name: header-logo-position, Value: relative
-    Name: header-logo-link-display, Value: inline-block
-    Name: header-logo-link-position, Value: absolute
-    Name: header-logo-link-top, Value: -1rem
-    Name: header-logo-link-left, Value: 0
+- Target card-outer within the card-work
 
-Create a header class selector
+    - Relatively position the element
+    - Hide any overflow
 
-    Pad the header with the value within the variable header-padding
+- Target the image inside card-image inside card-work
 
-Create a header-logo class selector
+    - The height of these elements should be 30rem
+    - The width of this element should be 100%
+    - Property: object-fit, Value: cover
+    - Vertically align to the bottom
 
-    Position the header-logo with the value of the variable header-logo-position
+- Target card-inner inside card-work
 
-Target the link inside the header-logo class
+    - Absolutely position the element
+    - Vertically position with -0.1rem on the top
+    - Horizontally position the element with -0.1rem on the left
+    - Horizontally position the element with -0.1rem on the right
+    - Set the z-order to 1
 
-    Render the display using the value of the variable header-logo-link-display
-    Position the links with the value of the variable header-logo-link-position
-    Set the vertical position of the element using header-logo-link-top
-    Set the horizontal position of the element using header-logo-link-left
+- Target card-inner when card-work is hover
 
-29. Styling and custom properties for the nav mandatory
+    - Set the background color to this value: rgba(0, 0, 0, 0.7)
 
-Based on styles/28-style.css
+- Target card-title inside card-work
 
-Edit the nav-item-link-hover property by setting its value to the color-whitevariable
+    - Center align the text
+    - Margins all around should be 0
+    - Opacity should be set to its lowest value
+    - The height of the selected elements should be 100%
+    - The position should be relative
 
-Target the before pseudo elements of nav-link that is inside the nav
+- Target the link inside card-title and card-work
 
-    Set the values of these elements to empty using content
-    Absolutely position the targeted elements
-    Set the vertical position to 0
-    The horizontal position of the targeted elements should be 0
-    Set the color of the background color of the targeted elements to the value color-white
-    The width of the targeted elements should be set to 0
-    Set the height to 20% of the root element value
+    - Make sure elements display as blocks
+    - Text should not be decorated
+    - Padding on the top should be 45%
 
-Target the before pseudo elements of nav-link when nav-item is hover and is inside nav
+- Create the after pseudo elements of the link (inside card-title and card-work)
 
-    Set the background color of the elements to the variable color-primary
-    Set the width of the elements to 100%
+    - Absolutely position the selected elements
+    - Set the top, right, left, and bottom positions to be 0
+    - The content property of these elements should have an empty value
 
-30. Fix the works section mandatory
+- Target card-title when card-work is hover
 
-Based on styles/29-style.css
+    - The opacity of these elements should be set to the value of 1
 
-Target card-outer within the card-work
+## 31. Add quotes decoration on testimonials
 
-    Relatively position the element
-    Hide any overflow
+- Target the card-quote that is inside the card-testimonial
 
-Target the image inside card-image inside card-work
+    - Style it so that the position is relative to its parent
 
-    The height of these elements should be 30rem
-    The width of this element should be 100%
-    Property: object-fit, Value: cover
-    Vertically align to the bottom
+- Target the before pseudo-element of card-quote that is inside the card-testimonial
 
-Target card-inner inside card-work
+    - The content should be set to the value \201C
+    - Absolutely position the selected elements
+    - The vertical position of the selected elements should be -4.5rem
+    - The horizontal position from the left should be -1rem
+    - The foreground color of the selected elements should be set to #efeded
+    - The size of fonts should be 10rem
+    - The z-order should be set to -1
 
-    Absolutely position the element
-    Vertically position with -0.1rem on the top
-    Horizontally position the element with -0.1rem on the left
-    Horizontally position the element with -0.1rem on the right
-    Set the z-order to 1
+## 32. Incorporating transitions
 
-Target card-inner when card-work is hover
+- Create some custom properties
 
-    Set the background color to this value: rgba(0, 0, 0, 0.7)
+    - Name: transition-duration, Value: .3s
+    - Name: transition-cubic-bezier, Value: cubic-bezier(0.17, 0.67, 0, 1.01)
 
-Target card-title inside card-work
+- Add transformations on the card work
 
-    Center align the text
-    Margins all around should be 0
-    Opacity should be set to its lowest value
-    The height of the selected elements should be 100%
-    The position should be relative
+- Target the card-image when card-work is hover
 
-Target the link inside card-title and card-work
+    - Use the transform property to apply a scale transform with a value of scale(1.2)
 
-    Make sure elements display as blocks
-    Text should not be decorated
-    Padding on the top should be 45%
+- Target the card-outer when card-work is hover
 
-Create the after pseudo elements of the link (inside card-title and card-work)
+    - Use the transform property apply a scale transform to make the elements shrink. Use scale(0.95)
 
-    Absolutely position the selected elements
-    Set the top, right, left, and bottom positions to be 0
-    The content property of these elements should have an empty value
+- Add animations on the navigation items
 
-Target card-title when card-work is hover
+- Inside .nav .nav-link::before
 
-    The opacity of these elements should be set to the value of 1
+    - Use the shorthand property transition and have it use the value of var(–transition-duration) var(transition-cubic-bezier)
 
-31. Add quotes decoration on testimonials mandatory
+- Animate the button background
 
-Target the card-quote that is inside the card-testimonial
+- In the hover state of the button class
 
-    Style it so that the position is relative to its parent
+    - The duration of the transition should be set to the variable transition-duration
+    - The transition effect should be applied to the color and background-color properties (transition-property)
 
-Target the before pseudo-element of card-quote that is inside the card-testimonial
+- Add transitions on the card works
 
-    The content should be set to the value \201C
-    Absolutely position the selected elements
-    The vertical position of the selected elements should be -4.5rem
-    The horizontal position from the left should be -1rem
-    The foreground color of the selected elements should be set to #efeded
-    The size of fonts should be 10rem
-    The z-order should be set to -1
+- Inside card-work:hover .card-image
 
-32. Incorporating transitions mandatory
+    - Use the shorthand property transition and have it use the value of var(–transition-duration) var(transition-cubic-bezier)
 
-Create some custom properties
+- Inside .card-work .card-inner
 
-    Name: transition-duration, Value: .3s
-    Name: transition-cubic-bezier, Value: cubic-bezier(0.17, 0.67, 0, 1.01)
-
-Add transformations on the card work
-
-Target the card-image when card-work is hover
-
-    Use the transform property to apply a scale transform with a value of scale(1.2)
-
-Target the card-outer when card-work is hover
-
-    Use the transform property apply a scale transform to make the elements shrink. Use scale(0.95)
-
-Add animations on the navigation items
-
-Inside .nav .nav-link::before
-
-    Use the shorthand property transition and have it use the value of var(–transition-duration) var(transition-cubic-bezier)
-
-Animate the button background
-
-In the hover state of the button class
-
-    The duration of the transition should be set to the variable transition-duration
-    The transition effect should be applied to the color and background-color properties (transition-property)
-
-Add transitions on the card works
-
-Inside card-work:hover .card-image
-
-    Use the shorthand property transition and have it use the value of var(–transition-duration) var(transition-cubic-bezier)
-
-Inside .card-work .card-inner
-
-    Use the shorthand property transition and have it use the value of var(–transition-duration) var(transition-cubic-bezier)
+    - Use the shorthand property transition and have it use the value of var(–transition-duration) var(transition-cubic-bezier)
 
 
 ---
