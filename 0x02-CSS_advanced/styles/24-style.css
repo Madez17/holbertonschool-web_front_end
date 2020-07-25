@@ -172,13 +172,13 @@ ul.row {
   margin: none;
 }
 .card-services a {
-  background-color: var(--color-light-grey);
   display: block;
   padding: 2rem;
+  background-color: var(--color-light-grey);
 }
 .card-services a:hover {
-  background-color: var(--color-primary);
   color: var(--color-white);
+  background-color: var(--color-primary);
   text-decoration: none;
 }
 .footer {
