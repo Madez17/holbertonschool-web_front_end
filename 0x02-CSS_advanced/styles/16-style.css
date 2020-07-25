@@ -83,6 +83,6 @@ a:active {
   text-transform: var(--section-tagline-transform);
 }
 .container {
-  margin: 0 auto;
-  width: 950px;
+  margin: auto;
+  width: 960px;
 }
