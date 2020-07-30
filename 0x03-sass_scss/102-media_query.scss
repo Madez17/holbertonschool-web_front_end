@@ -1,0 +1,29 @@
+/* Media query sass */
+
+$color: #1D1D1D;
+$big-size: 20px;
+$medium-size: 18px;
+$regular-size: 16px;
+$smaller-size: 14px;
+
+h1 {
+    font-size: $big-size;
+    @media screen and (max-width: 960px) {
+        & {
+            font-size: $medium-size;
+        }
+    }
+    @media screen and (max-width: 640px) {
+        & {
+            font-size: $regular-size;
+        }
+    }
+    @media screen and (max-width: 320px) {
+        & {
+            font-size: $smaller-size;
+            &.small {
+                color: $color;
+            }
+        } 
+    }
+}
