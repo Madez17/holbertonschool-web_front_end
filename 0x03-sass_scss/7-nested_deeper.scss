@@ -1,0 +1,14 @@
+/* Nested and nested again */
+$primary-size: 14px; 
+$headers-size: 16px;
+$smaller-size: 12px;
+
+body {
+    font-size: $primary-size;
+    & h1 {
+        font-size: $headers-size;
+        &.smaller {
+            font-size: $smaller-size;
+        }
+    }
+}
