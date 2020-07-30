@@ -1,0 +1,5 @@
+/* For loop sass */
+
+@for $i from 1 through 5 {
+    h#{$i} { font-size: 1 * $i + px;}
+}
