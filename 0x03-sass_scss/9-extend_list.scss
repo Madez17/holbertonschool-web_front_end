@@ -1,0 +1,16 @@
+/* Extend classes */
+$font-size: 12px;
+$primary-color: #00FF00;
+$secondary: #FF0000;
+
+.info {
+    font-size: $font-size;
+}
+.success {
+    @extend .info;
+    color: $primary-color;
+}
+.warning {
+    @extend .info;
+    color: $secondary;
+}  
