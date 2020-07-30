@@ -1,0 +1,13 @@
+/* Media query sass */
+
+$big-size: 20px;
+$smaller-size: 14px;
+
+h1 {
+    font-size: $big-size;
+    @media screen and (max-width: 320px) {
+        & {
+            font-size: $smaller-size;
+        }
+    }
+}
