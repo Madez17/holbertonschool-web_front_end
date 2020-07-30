@@ -24,17 +24,17 @@ Install Sass/Scss on Ubuntu 18.04 LTS
 
 Tasks
 
-# 0. Always debugging!
+## 0. Always debugging!
 
 Write a Sass file that prints Hello world in the debug output.
 
-# 1. Color variable
+## 1. Color variable
 
 Write a Sass file that assigns the text color #3D3D3D to the HTML tags body and p.
 
   - You must use a Sass variable
 
-# 2. Colors
+## 2. Colors
 
 Write a Sass file that assigns:
 
@@ -42,7 +42,7 @@ Write a Sass file that assigns:
   - The background color #6D6D6D to the HTML tags body and h2
   - You must use 2 Sass variables
 
-# 3. Nested tag
+## 3. Nested tag
 
 Write a Sass file that assigns:
 
@@ -50,7 +50,7 @@ Write a Sass file that assigns:
   - Margin 10px to all of the p tags inside body tags
   - You must use nested declarations
 
-# 4. Nested class
+## 4. Nested class
 
 Write a Sass file that assigns:
 
@@ -58,7 +58,7 @@ Write a Sass file that assigns:
   - Text color #FF0000 to any elements of class .red inside body tags
   - You must use nested declarations
 
-# 5. Nested child
+## 5. Nested child
 
 Write a Sass file that assigns:
 
@@ -66,7 +66,7 @@ Write a Sass file that assigns:
   - Text color #FF0000 to any elements of class .red that are the first children of the body
   - You must use nested declarations
 
-# 6. Nested hover
+## 6. Nested hover
 
 Write a Sass file that assigns:
 
@@ -74,7 +74,7 @@ Write a Sass file that assigns:
   - When the user hovers over button tags, text color should change to #00FF00
   - You must use nested declarations
 
-# 7. Nested and nested again
+## 7. Nested and nested again
 
 Write a Sass file that assigns:
 
@@ -84,7 +84,7 @@ Write a Sass file that assigns:
   - You must use nested declarations
 
 
-# 8. Margin mixin
+## 8. Margin mixin
 
 Write a Sass file that assigns:
 
@@ -93,7 +93,7 @@ Write a Sass file that assigns:
   - You must use a mixin
 
 
-# 9. Extended
+## 9. Extended
 
 Write a Sass file that assigns:
 
@@ -102,7 +102,7 @@ Write a Sass file that assigns:
   - Text color #FF0000 to all tags of class .warning and extend style of the class .info
 
 
-# 10. Import colors
+## 10. Import colors
 
 Write a Sass file that assigns:
 
@@ -112,7 +112,7 @@ Write a Sass file that assigns:
   - You must use @import
 
 
-# 11. For each
+## 11. For each
 
 Write a Sass file that creates a class for each name in the list $list-names and assigns the background image based on the name (example below):
 
@@ -120,7 +120,7 @@ Write a Sass file that creates a class for each name in the list $list-names and
   - You must use @each statement
 
 
-# 12. Loop Headers
+## 12. Loop Headers
 
 Write a Sass file that creates H* tags, where ‘*’ is the size of the font used.
 
@@ -128,7 +128,7 @@ Write a Sass file that creates H* tags, where ‘*’ is the size of the font us
   - You must create H* tags from 1 to 5
   - You must use @for statement
 
-# 13. Columns and operators
+## 13. Columns and operators
 
 Write a Sass file that creates classes with different width:
 
@@ -140,14 +140,14 @@ Write a Sass file that creates classes with different width:
   - You must use a @for statement
 
 
-# 14. Media query #0
+## 14. Media query #0
 
 Write a Sass file that assigns:
 
   - Font size 20px to h1 tags
   - Font size 14px to h1 tags, when your screen width is smaller than 320px
 
-# 15. Media query #1
+## 15. Media query #1
 
 Write a Sass file that assigns:
 
@@ -156,3 +156,9 @@ Write a Sass file that assigns:
   - Font size 16px to h1 tags, when your screen width is smaller than 640px
   - Font size 14px to h1 tags, when your screen width is smaller than 320px
   - Text color #1D1D1D to h1.small tags, when your screen width is smaller than 320px
+  
+  
+---
+
+## Author
+* **Mafe** - [Madez17](https://github.com/Madez17)
