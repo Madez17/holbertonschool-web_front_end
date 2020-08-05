@@ -174,9 +174,11 @@
   
   /* Grid
       ============================= */
-  .row {
-    display: flex;
+  
+  .row{
+      display: flex;
   }
+      
   ul.row {
     margin: -1rem;
     padding: 0;
@@ -197,10 +199,6 @@
   
   /* Navbar
       ============================= */
-  
-  .navbar-menu {
-    float: right;
-  }
   
   .nav {
     margin: 0;
@@ -250,16 +248,16 @@
   
   .header {
     padding: var(--header-padding);
-          position: relative;
-          z-index: 3;
-          background: transparent !important;
+         position: relative;
+         z-index: 3;
+         background: transparent !important;
   }
 
   .header-container {
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between;
   }
-    
+  
   /* Footer
       ============================= */
   
@@ -359,15 +357,15 @@
   }
 
   /* Section Latest news ============================= */
-    .section-latest-news .row {
-      flex-direction: row-reverse;
-    }
-
-  /* Section SERVICES ============================= */
-    .section-services .row {
-      flex-wrap: wrap;
-    }
+  .section-latest-news .row {
+    flex-direction: row-reverse;
+  }
   
+  /* Section SERVICES ============================= */
+  .section-services .row {
+    flex-wrap: wrap;
+  }
+
   /*** 4. CARD ***/
   
   /* Card (all styles)
