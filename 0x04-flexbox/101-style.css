@@ -1,0 +1,48 @@
+:root {
+  --odd-color: #00d2d2;
+  --even-color: orange;
+  --white-color: #fff;
+  --black-color: #000;
+  --size-large: 3rem;
+  --size-medium: 2.5rem;
+  --size-small: 1.5rem;
+  --font-weight: 600;
+}
+.container {
+  align-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+.container [class*='box'] {
+  align-self: baseline;
+  align-items: center;
+  color: var(--white-color);
+  display: flex;
+  flex-shrink: 0;
+  font-weight: var(--font-weight);
+  height: 15px;
+  padding: 1.5rem;
+}
+
+.container div:nth-child(odd) {
+  background-color: var(--odd-color);
+}
+
+.container div:nth-child(even) {
+  background-color: var(--even-color);
+}
+
+.container div:nth-child(2n+0) {
+  font-size: var(--size-medium);
+  padding: 2.6rem;
+}
+
+.container div:nth-child(1), div:nth-child(5) {
+  font-size: var(--size-small);
+}
+
+.container div:nth-child(3) {
+  padding: 5rem;
+  font-size: var(--size-large);
+}
