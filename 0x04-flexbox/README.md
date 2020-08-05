@@ -1,3 +1,4 @@
 # Flex Box
 
-[Imgur](https://i.imgur.com/FBcgIqn.png)
+![Imgur](https://i.imgur.com/FBcgIqn.png)
+
