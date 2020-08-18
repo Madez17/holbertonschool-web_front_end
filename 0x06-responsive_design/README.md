@@ -261,3 +261,8 @@ In 10-styles.css, in the /* Section HERO section, just before the media query:
   - Target section-hero class inside article-page class
     - Property: margin-top, Value: -8.5rem
     - Property: padding-top, Value: 5rem
+
+---
+
+## Author
+* **Mafe** - [Madez17](https://github.com/Madez17)
