@@ -262,6 +262,30 @@ In 10-styles.css, in the /* Section HERO section, just before the media query:
     - Property: margin-top, Value: -8.5rem
     - Property: padding-top, Value: 5rem
 
+## 11. Make the article page responsive #advanced
+
+use the following article.html for this task
+
+inside the /* Post section, before the end of the section:
+
+  - Target the post class
+    - Property: margin, Value: 0 2rem
+  - Create a new media query of max-width: 767px
+    - Target the post class
+        - Property: flex-direction, Value: column
+        - Property: margin, Value: 2rem
+    - Target the post-content class
+        - Property: padding-left, Value: 0
+
+Inside the /* Comment section, before the end of the section:
+
+  - Create a new media query of max-width: 767px
+    - Target post-comments class
+      - Property: width, Value: calc(100% - 4rem)
+      - Property: margin, Value: 2rem
+      - Property: padding, Value: 0
+
+
 ---
 
 ## Author
