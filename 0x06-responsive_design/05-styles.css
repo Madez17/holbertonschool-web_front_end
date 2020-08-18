@@ -297,7 +297,7 @@
       --nav-item-margin: 0;
     }
 
-    header .nav {
+    .header .nav {
       flex-direction: column;
       max-height: 0;
       overflow: hidden;
