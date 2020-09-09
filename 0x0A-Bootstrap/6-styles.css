@@ -1,0 +1,58 @@
+:root {
+    --color-primary: #E0003C;
+    --color-secondary: #BC1340;
+    --color-white: #fff;
+    --text-muted-color: #8C8C8C;
+}
+
+a, a:hover, a:focus {
+    color: var(--color-primary);
+}
+
+.btn-primary, .btn-outline-primary {
+    border-color: var(--color-primary);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+}
+
+.border-bottom {
+    border-bottom: 1px solid var(--color-primary) !important;
+}
+
+.btn-outline-primary:active,
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-primary:active,
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--color-secondary) !important;
+    border-color: var(--color-secondary) !important;
+    color: var(--color-white) !important;
+}
+
+.btn-outline-primary {
+    color: var(--color-primary);
+}
+
+.card-header {
+    background-color: var(--color-primary);
+    border-top-right-radius: 1rem !important;
+    border-top-left-radius: 1rem !important;
+    color: var(--color-white);
+}
+
+.card,
+.card-header,
+.card-footer {
+    border-color: var(--color-primary);
+}
+
+.card, .card-footer {
+    border-radius: 1rem;
+}
+
+.text-muted {
+    color: var(--text-muted-color);
+}
