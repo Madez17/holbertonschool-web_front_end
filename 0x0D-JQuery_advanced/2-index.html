@@ -9,26 +9,26 @@
         <script type="application/javascript">
             function createFamilyTree(response)
             {
-                    // forming table header 	
-                    var allcolumns = response.columns;
-                    var html = "<table><thead>"
-                    for (var i = 0; i < allcolumns.length; i++)
-                    {
-                            html += '<th>' + allcolumns[i] + '</th>';
-                    }
-                    html += "</thead></table>"
-                    $(document.body).html(html);
-                    // forming table header ends 
+                // forming table header 	
+                var allcolumns = response.columns;
+                var html = "<table><thead>"
+                for (var i = 0; i < allcolumns.length; i++)
+                {
+                        html += '<th>' + allcolumns[i] + '</th>';
+                }
+                html += "</thead></table>"
+                $(document.body).html(html);
+                // forming table header ends 
 
-                    
-                    var alldata = response.data;
-                    var alldatahtml = '<tbody>';
-                    for (var j = 0; j < alldata.length; j++)
-                    {
-                            alldatahtml += '<tr><td>' + alldata[j][0] + '</td><td>' + alldata[j][1] + '</td></tr>';
-                    }
-                    
-                    alldatahtml+='</tbody>';
+                
+                var alldata = response.data;
+                var alldatahtml = '<tbody>';
+                for (var j = 0; j < alldata.length; j++)
+                {
+                        alldatahtml += '<tr><td>' + alldata[j][0] + '</td><td>' + alldata[j][1] + '</td></tr>';
+                }
+                
+                alldatahtml+='</tbody>';
                     
                 $('table thead').after(alldatahtml);
             }
