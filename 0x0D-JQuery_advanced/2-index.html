@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Task 2</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <script type="application/javascript">
+            function createFamilyTree(container, data) {
+                var table = $("<table/>").addClass('CSSTableGenerator');
+                $.each(data, function(rowIndex, r) {
+                    var row = $("<tr/>");
+                    $.each(r, function(colIndex, c) { 
+                        row.append($("<t"+(rowIndex == 0 ?  "h" : "d")+"/>").text(c));
+                    });
+                    table.append(row);
+                });
+                return container.append(table);
+            }
+            $(document).ready(function() {
+                var data = [["Firtname", "Lastname"], //headers
+                            ["Guillaume", "Salva"], 
+                            ["Paulette", "Salva"], 
+                            ["Antoine", "Salva"]]
+                var cityTable = createFamilyTree($(document.body), data);
+            });
+            createFamilyTree();
+        </script>
+    </body>
+</html>
