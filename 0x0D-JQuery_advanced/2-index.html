@@ -7,28 +7,6 @@
     </head>
     <body>
         <script type="application/javascript">
-            // function createFamilyTree(container, data) {
-            //     var table = $("<table/>").addClass('CSSTableGenerator');
-            //     $.each(data, function(rowIndex, r) {
-
-            //         var row = $("<tr/>");
-            //         $.each(r, function(colIndex, c) { 
-            //             row.append($("<t"+(rowIndex == 0 ?  "h" : "d")+"/>").text(c));
-            //         });
-            //         table.append(row);
-            //     });
-            //     return container.append(table);
-            // }
-            // $(document).ready(function() {
-            //     var data = [["Firtname", "Lastname"], //headers
-            //                 ["Guillaume", "Salva"], 
-            //                 ["Paulette", "Salva"], 
-            //                 ["Antoine", "Salva"]]
-            //     var NameTable = createFamilyTree($(document.body), data);
-            // });
-
-            
-
             function createFamilyTree(response)
             {
                     // forming table header 	
@@ -76,8 +54,6 @@
                 };
             createFamilyTree(response);
             });
-
-
         </script>
     </body>
 </html>
