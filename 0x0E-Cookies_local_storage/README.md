@@ -1,7 +1,6 @@
 # Cookies & local storage
 
-![Imgur](https://i.imgur.com/aU5QEvJ.png) ![Imgur](https://i.imgur.com/JgvcQgk.png) 
-
+![Imgur](https://i.imgur.com/JgvcQgk.png) ![Imgur](https://i.imgur.com/aU5QEvJ.png) 
 ## Tasks
 
 ## 0. Create basic cookie
