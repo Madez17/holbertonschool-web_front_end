@@ -11,7 +11,9 @@
 ## 0x06. Responsive Design
 ## 0x07. Accessibility
 ## 0x0A. Bootstrap
-
+## 0x0C-Javascript_advanced
+## 0x0D-JQuery_advanced
+## 0x0E-Cookies_local_storage 
 ---
 
 ## Author
