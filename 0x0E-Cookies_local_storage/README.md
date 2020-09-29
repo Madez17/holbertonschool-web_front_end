@@ -1,6 +1,6 @@
 # Cookies & local storage
 
-![Imgur](https://i.imgur.com/aU5QEvJ.png) # dsd
+![Imgur](https://i.imgur.com/aU5QEvJ.png) ![Imgur](https://i.imgur.com/aU5QEvJ.png) 
 
 ## Tasks
 
