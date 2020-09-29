@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+</head>
+<body>
+
+    <div>
+        <h1>Login to the website</h1>
+        <input type="text" id="firstname" placeholder="Firstname">
+        <input type="text" id="email" placeholder="email">
+        <button type="button" onclick="setCookies()">Log me in</button>
+    </div>
+    
+    <div>
+        <h1>Cookies</h1>
+        <button type="button" onclick="showCookies()">Show the cookies</button>
+    </div>
+
+    <script type="application/javascript">
+
+        function setCookies () {
+            // date expires cookie
+            var d = new Date();
+            d.setTime(d.getTime() + (10*24*60*60*1000));
+            var expires = "expires="+ d.toUTCString();
+        
+            document.cookie = "firstname = " + document.getElementById("firstname").value  + ";" + expires + ";path=/";
+            document.cookie = "email = " + document.getElementById("email").value + ";" + expires + ";path=/";
+        }
+
+        
+        function getCookie (name) {
+            let array = document.cookie.split(";");
+            
+            for (var i = 0; i < array.length; i++) {
+                var c = array[i];
+                while (c.charAt(0) == " ") {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length + 1, c.length);
+                }
+            }
+            return "";
+        }
+        
+        function showCookies () {
+            let addElement = document.createElement('p');
+            let data = document.createTextNode('Email: ' + getCookie('email') + ' - ' + 'Firstname: ' +  getCookie('firstname'));
+            addElement.appendChild(data);
+            document.body.appendChild(addElement);
+        }
+    </script>
+</body>
+</html>
