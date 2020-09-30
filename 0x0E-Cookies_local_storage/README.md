@@ -26,6 +26,8 @@ In a file 0-index.html, create a basic html template:
         - It should set the inner html with Cookies: and the value of the cookie
         - It should append the paragraph at the bottom of the page
 
+
+
 ---
 
 ## Author

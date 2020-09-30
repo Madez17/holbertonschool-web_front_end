@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sessionStorage</title>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2.2.1/src/js.cookie.min.js"></script>
+</head>
+<body>
+    <script type="application/javascript">
+        let availableItems = ['Shampoo', 'Soap', 'Sponge', 'Water'];
+
+        let addItemToCart = (item) => {
+            sessionStorage.setItem(item, true);
+        }
+
+        let createStore = () => {
+            let itemsList = document.createElement('ul');
+            
+            for (let i = 0; i < availableItems.length; i++) {
+                let productList = document.createElement('li');
+                productList.addEventListener('click', () => {
+                    addItemToCart(availableItems[i]);
+                });
+                productList.textContent = availableItems[i];
+                itemsList.appendChild(productList);
+            }
+            document.body.appendChild(itemsList);
+        }
+
+        let displayCart = () => {
+            if (sessionStorage !== undefined) {
+                let countItems = sessionStorage.length
+
+                let messageAmountItems = document.createElement('p');
+                messageAmountItems.textContent = 'You previously had ' + countItems + ' items in your cart';
+                document.body.appendChild(messageAmountItems);
+            }
+        }
+
+        if ('sessionStorage' in window && window['sessionStorage'] === null) {
+            alert('Sorry, your browser does not support Web storage. Try again with a better one');
+        } else {
+            createStore();
+            displayCart();
+        }
+    </script>
+</body>
+</html>
