@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sessionStorage</title>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2.2.1/src/js.cookie.min.js"></script>
+</head>
+<body>
+    <script type="application/javascript">
+        let availableItems = ['Shampoo', 'Soap', 'Sponge', 'Water'];
+
+        let getCartFromStorage = () => {
+            return sessionStorage.cart ? JSON.parse(sessionStorage.cart) : {};
+        }
+
+        let addItemToCart = (item) => {
+            let cart = getCartFromStorage();
+            cart[item] = cart[item] ? cart[item] + 1 : 1;
+            sessionStorage.cart = JSON.stringify(cart);
+            displayCart();
+        }
+
+        let removeItemfromCart = (item) => {
+            let cart = getCartFromStorage();
+            delete cart.item;
+            sessionStorage.cart = JSON.stringify(cart);
+            displayCart();
+        }
+
+
+        let clearCart = () => {
+            sessionStorage.clear();
+            displayCart();
+        }
+
+        let createStore = () => {
+            let titlePage = document.createElement('h2');
+            titlePage.textContent = 'Available products: ';
+            document.body.appendChild(titlePage);
+
+            let itemsList =  document.createElement('ul');
+
+            for (let i = 0; i < availableItems.length; i++) {
+
+                let productList = document.createElement('li');
+                productList.addEventListener('click', () => {
+                    addItemToCart(availableItems[i]);
+                });
+                
+                productList.textContent = availableItems[i];
+                itemsList.appendChild(productList);
+            }
+
+            document.body.appendChild(itemsList);
+        } 
+
+        let displayCart = () => {
+
+            // if (!document.getElementsByTagName('h2')[1]) {
+            let titleCart = document.createElement('h2');
+            titleCart.textContent = 'Your cart: ';
+            document.body.appendChild(titleCart);
+            // }
+
+            
+            let divContainer = document.getElementsByTagName('div')[0];
+
+            if (divContainer) {
+                divContainer.removeChild('ul');
+            } else {
+                let emptyDiv = document.createElement('div');
+                document.body.appendChild(emptyDiv);
+            }
+            
+            updateCart();
+        }
+
+        let updateCart = () => {
+            let cartUpdate = getCartFromStorage();
+            let cartTitle = document.createElement('ul');
+            document.getElementsByTagName('div')[0].appendChild(cartTitle);
+        }
+
+
+        if ('sessionStorage' in window && window['sessionStorage'] === null) {
+            alert('Sorry, your browser does not support Web storage. Try again with a better one');
+        } else {
+            createStore();
+            displayCart();
+        }
+    </script>
+</body>
+</html>
