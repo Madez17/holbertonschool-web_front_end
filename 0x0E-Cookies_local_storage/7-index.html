@@ -57,17 +57,16 @@
 
         let displayCart = () => {
 
-            // if (!document.getElementsByTagName('h2')[1]) {
-            let titleCart = document.createElement('h2');
-            titleCart.textContent = 'Your cart: ';
-            document.body.appendChild(titleCart);
-            // }
+            if (document.getElementsByTagName('h2')[1] === undefined) {
+                let titleCart = document.createElement('h2');
+                titleCart.textContent = 'Your cart: ';
+                document.body.appendChild(titleCart);
+            }
 
-            
             let divContainer = document.getElementsByTagName('div')[0];
 
             if (divContainer) {
-                divContainer.removeChild('ul');
+                divContainer.removeChild(document.getElementsByTagName('ul')[1]);
             } else {
                 let emptyDiv = document.createElement('div');
                 document.body.appendChild(emptyDiv);
@@ -77,11 +76,29 @@
         }
 
         let updateCart = () => {
-            let cartUpdate = getCartFromStorage();
-            let cartTitle = document.createElement('ul');
-            document.getElementsByTagName('div')[0].appendChild(cartTitle);
-        }
+            let cart = getCartFromStorage();
+            let cartList = document.createElement('ul');
+            document.getElementsByTagName('div')[0].appendChild(cartList);
 
+            if (!Object.keys(cart).length) {
+                let emptyMessage = document.createElement('li');
+                emptyMessage.textContent = 'Your cart is empty';
+                cartList.appendChild(emptyMessage);
+                console.log('VAcio')
+            } else {
+                let allProducts = Object.entries(cart);
+                for (let i = 0; i < allProducts.length; i++) {
+                    let listProduct = document.createElement('li');
+                    listProduct.textContent = allProducts[i][0] + ' x ' + allProducts[i][1];
+                    cartList.appendChild(listProduct);
+                    console.log('Ciclo')
+                }
+                console.log('NO vacio')
+            }
+
+            document.body.appendChild(cartList);
+
+        }
 
         if ('sessionStorage' in window && window['sessionStorage'] === null) {
             alert('Sorry, your browser does not support Web storage. Try again with a better one');
