@@ -23,7 +23,7 @@
 
         let removeItemfromCart = (item) => {
             let cart = getCartFromStorage();
-            delete cart.item;
+            delete cart[item];
             sessionStorage.cart = JSON.stringify(cart);
             displayCart();
         }
@@ -71,7 +71,6 @@
                 let emptyDiv = document.createElement('div');
                 document.body.appendChild(emptyDiv);
             }
-            
             updateCart();
         }
 
@@ -80,24 +79,27 @@
             let cartList = document.createElement('ul');
             document.getElementsByTagName('div')[0].appendChild(cartList);
 
-            if (!Object.keys(cart).length) {
-                let emptyMessage = document.createElement('li');
-                emptyMessage.textContent = 'Your cart is empty';
-                cartList.appendChild(emptyMessage);
-                console.log('VAcio')
-            } else {
+            let message = document.createElement('li');
+            message.textContent =  !Object.keys(cart).length ? 'Your cart is empty' : 'Clear my cart';
+            cartList.appendChild(message);
+
+        
+            if (Object.keys(cart).length) {
+
+                message.addEventListener('click', () => {
+                    clearCart();
+                })
+
                 let allProducts = Object.entries(cart);
                 for (let i = 0; i < allProducts.length; i++) {
                     let listProduct = document.createElement('li');
-                    listProduct.textContent = allProducts[i][0] + ' x ' + allProducts[i][1];
+                    listProduct.textContent = allProducts[i][0] + ' x ' + allProducts[i][1] + ' (remove)';
+                    listProduct.addEventListener('click', () => {
+                        removeItemfromCart(allProducts[i][0]);
+                    })
                     cartList.appendChild(listProduct);
-                    console.log('Ciclo')
                 }
-                console.log('NO vacio')
             }
-
-            document.body.appendChild(cartList);
-
         }
 
         if ('sessionStorage' in window && window['sessionStorage'] === null) {
